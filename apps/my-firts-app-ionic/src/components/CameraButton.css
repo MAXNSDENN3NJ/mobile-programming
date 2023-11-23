@@ -1,0 +1,13 @@
+.camera-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .custom-button {
+    background-color: #54b357; /* Color de fondo */
+    color: rgb(184, 15, 15); /* Color del texto */
+  }
+
+  
