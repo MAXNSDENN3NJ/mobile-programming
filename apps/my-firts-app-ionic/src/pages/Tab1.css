@@ -1,0 +1,12 @@
+.photo-wrapper {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-wrapper ion-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; 
+}

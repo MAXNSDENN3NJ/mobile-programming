@@ -82,10 +82,13 @@ export function usePhotoGallery() {
   };
 
   const deletePhoto = async (photo: UserPhoto) => {
-    // Remove this photo from the Photos reference data array
-    const newPhotos = photos.filter(p => p.filepath !== photo.filepath);
+    const confirmed = window.confirm("¿Estás seguro de que quieres eliminar esta foto?");
+    if (!confirmed) {
+        return;
+    }
 
     // Update photos array cache by overwriting the existing photo array
+    const newPhotos = photos.filter(p => p.filepath !== photo.filepath);
     Preferences.set({key: PHOTO_STORAGE, value: JSON.stringify(newPhotos) });
 
     // delete photo file from filesystem
